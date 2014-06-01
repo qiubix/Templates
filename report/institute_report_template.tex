@@ -1,0 +1,88 @@
+% !TeX spellcheck = pl_PL
+% !TEX encoding = utf8
+
+% Wspólne katalogi.
+\def\ROOTPATH{../../../..}
+\def\COMDIR{\ROOTPATH/common}
+\def\PICS{\ROOTPATH/rysunki}
+%\def\ROBREXPICS{\ROOTPATH/rysunki/TK/2013_robrex_specyfikacja/}
+%\def\SORTERPICS{\ROOTPATH/rysunki/TK/2013_sorter/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Klasa dokumentu.
+\documentclass{../common/tk_iaiis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakiety.
+\usepackage{lmodern}
+\usepackage{subfig}
+\usepackage{\COMDIR/agent-symbols}
+\usepackage{amssymb}
+
+% importowanie obrazków pdf+tex z Inkscape
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Przydatne makra.
+\def\rys#1{rys.~\ref{fig:#1}}
+\def\Rys#1{Rys.~\ref{fig:#1}}
+\newcommand{\ang}[1]{ang. \textit{#1}}
+
+% Czerwony komentarz TK.
+\usepackage{color}
+\newcommand{\ckk}[1]{\textcolor{red}{TK: #1}}
+\newcommand{\csk}[1]{\textcolor{red}{\footnote{\ckk{#1}}}}
+\newcommand{\cik}[2]{\ckk{#1 :\begin{itemize}#2\end{itemize}}}
+
+% Niebieski komentarz Karola.
+\newcommand{\nkk}[1]{\textcolor{blue}{KK: #1}}
+\newcommand{\nik}[2]{\nkk{#1 :\begin{itemize}#2\end{itemize}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Strona tytułowa.
+\title{}
+\period{01.09.2013 -- 30.11.2013}
+\author{}
+\date{\today}
+\documenttype{Raport Instytutowy nr XXX}
+\documentversion{draft}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Strona tytułowa.
+\maketitle
+
+% Spis treści.
+\tableofcontents
+
+\chapter{Wstęp}
+\cik{Ten raport ma opisać wykorzystanie wnioskowania probabilistycznego w zadaniu rozróżniania obiektów płaskich od wypukłych}
+{
+\item kilka słów o aktywnej wizji (taka mikroprzeglądówka), 
+\item o zadaniu,
+\item o poprzednich wersjach (odnośniki do KKR/MMAR),
+\item o tym, że opracowano strukturę systemu oraz zachowania i prosty automat realizujący zadanie
+\item wyjawienie celu prac: model + wnioskowanie
+}
+
+
+W Rozdziale \ref{sec:implementation} opisane zostały wykorzystane narzędzia programistyczne, z naciskiem na nowowytworzone komponenty oraz zadanie służące do rozróżniania obiektów płaskich od wypukłych/trójwymiarowych.
+
+\chapter{Model obiektu oraz proces wnioskowania}
+\nik{Tutaj należy opisać}
+{
+\item kilka słów o pgm, bn, rodzaje wnioskowania
+\item model sieci bayesa dla niebieskiej piłeczki (a raczej dwa), w tym opis struktury sieci, wagi
+}
+
+
+\bibliographystyle{plabbrv}
+\bibliography{\COMDIR/robot}
+
+\end{document}
