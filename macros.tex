@@ -36,3 +36,26 @@
 
 % reference to English word
 \newcommand{\ang}[1]{ang. \textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KOLOROWE KOMENTARZE
+% Czerwony komentarz FIXME.
+\newcommand{\FIXME}[1]{\textcolor{red}{FIXME: #1}}
+\newcommand{\ckk}[1]{\textcolor{red}{FIXME: #1}}
+\newcommand{\csk}[1]{\textcolor{red}{\footnote{\ckk{#1}}}}
+\newcommand{\cik}[2]{\ckk{#1 :\begin{itemize}#2\end{itemize}}}
+
+% Niebieski komentarz TODO.
+\newcommand{\TODO}[1]{\textcolor{blue}{TODO: #1}}
+\newcommand{\nkk}[1]{\textcolor{blue}{TODO: #1}}
+\newcommand{\nik}[2]{\nkk{#1 :\begin{itemize}#2\end{itemize}}}
+
+% Zielony komentarz APPROVED.
+\newcommand{\APPROVED}[1]{\textcolor{green}{APPROVED: #1}}
+\newcommand{\zka}[1]{\textcolor{green}{APPROVED: #1}}
+\newcommand{\zia}[2]{\zka{#1 :\begin{itemize}#2\end{itemize}}}
+
+% Fioletowy komentarz REVIEW.
+\newcommand{\fkm}[1]{\textcolor{violet}{REVIEW: #1}}
+\newcommand{\fim}[2]{\fkm{#1 :\begin{itemize}#2\end{itemize}}}
+
